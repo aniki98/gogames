@@ -1,24 +1,32 @@
-@import 'vars';
-@import 'fonts';
 @import 'reset';
+@import 'fonts';
+@import 'vars';
 @import 'global';
 
 
+.header{
+    margin-top: 10px;
+    color: $cDark;
+    line-height: 24px;
 
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
 
+    &__logo{
+        max-width: 286px;
+        width: 100%;
+    }
 
+    &__nav-list{
+        display: flex;
+        column-gap: 15px;
+        align-items: center;
+    }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-@import 'media';
+    &__nav-list-item-link{
+        padding: 15px;
+    }
+}

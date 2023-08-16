@@ -1,0 +1,23 @@
+@font-face {
+    font-family: 'Qanelas Bold';
+    font-weight: 700;
+    font-style: normal;
+    src: url('../fonts/dist/Qanelas-Bold.woff2') format('woff2'),
+         url('../fonts/dist/Qanelas-Bold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Josefin Medium';
+    font-weight: 500;
+    font-style: normal;
+    src: url('../fonts/dist/JosefinSans-Medium.woff2') format('woff2'),
+         url('../fonts/dist/JosefinSans-Medium.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Josefin Bold';
+    font-weight: 700;
+    font-style: normal;
+    src: url('../fonts/dist/JosefinSans-Bold.woff2') format('woff2'),
+         url('../fonts/dist/JosefinSans-Bold.woff') format('woff');
+}
