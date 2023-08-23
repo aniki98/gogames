@@ -9,13 +9,22 @@
 </head>
 
 <body>
+    <div class="hero-bg"></div>
+    <div class="hero-bg-blot"></div>
+    <div class="hero-bg-cross1"></div>
+    <div class="hero-bg-cross2"></div>
+    <div class="hero-bg-dots"></div>
     <header class="header">
         <div class="container">
             <div class="header__inner">
                 <a class="header__logo" href="#">
-                    <img class="header__logo-img" src="images/dist/sprite.svg#header-logo" alt="Heolas.lt company logo">
+                    <picture class="header__logo-picture">
+                        <source srcset="images/dist/header-logo.avif" type="image/avif">
+                        <source srcset="images/dist/header-logo.webp" type="image/webp">
+                        <img class="header__logo-img" src="images/dist/header-logo.png" alt="Heolas.lt company logo">
+                    </picture>
                 </a>
-    
+
                 <nav class="header__nav">
                     <ul class="header__nav-list">
                         <li class="header__nav-list-item">
@@ -42,6 +51,75 @@
     <main class="main">
         <div class="container">
             <h1 class="visually-hidden">Healas.lt - console gaming hardware for purchase and for rent</h1>
+
+            <section class="hero">
+                <div class="hero__left">
+                    <h2 class="title">
+                        <span class="subtitle hero__subtitle">Gaming Consoles</span>
+                        Try It, Rent It,
+                        <span class="title--accent">Save </span>
+                        <span class="title--accent title--accent2">$50!</span>
+                    </h2>
+                    <p class="text">
+                        It is a long established fact that a reader will be distracted by the readable content of a page
+                        when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal
+                        distribution of letters as opposed.
+                    </p>
+                    <a class="get-started-btn" href="#">Get Started Now</a>
+                </div>
+
+                <div class="hero__right">
+                    <div class="hero__right-img-bg"></div>
+                    <div class="hero__right-img"></div>
+
+                    <a class="hero__product-card" href="#" target="_blank">
+                        <article class="product-card">
+                            <div class="product-card__info">
+                                <h3 class="product-card__title">
+                                    Sony Dualshock 4 Wireless Controller
+                                </h3>
+                                <p class="product-card__text">
+                                    $50 Per Hour
+                                </p>
+                                <div class="product-card__rate">
+                                    <div class="product-card__rate-stars">
+                                        <img class="product-card__rate-star" src="images/dist/sprite-stack.svg#rate-star" alt="rating star">
+                                        <img class="product-card__rate-star" src="images/dist/sprite-stack.svg#rate-star" alt="rating star">
+                                        <img class="product-card__rate-star" src="images/dist/sprite-stack.svg#rate-star" alt="rating star">
+                                        <img class="product-card__rate-star" src="images/dist/sprite-stack.svg#rate-star" alt="rating star">
+                                        <img class="product-card__rate-star" src="images/dist/sprite-stack.svg#rate-star" alt="rating star">
+                                    </div>
+                                    <span class="product-card__rate-count">125+Review</span>
+                                </div>
+                            </div>
+                            <img class="product-card__img" src="images/dist/sprite-stack.svg#hero-vr-glasses" alt="Sony Wireless VR Glasses">
+                        </article>
+                    </a>
+                    <a class="hero__product-card hero__product-card--right" href="#" target="_blank">
+                        <article class="product-card">
+                            <div class="product-card__info">
+                                <h3 class="product-card__title">
+                                    Sony Dualshock 4 Wireless Controller
+                                </h3>
+                                <p class="product-card__text">
+                                    $50 Per Hour
+                                </p>
+                                <div class="product-card__rate">
+                                    <div class="product-card__rate-stars">
+                                        <img class="product-card__rate-star" src="images/dist/sprite-stack.svg#rate-star" alt="rating star">
+                                        <img class="product-card__rate-star" src="images/dist/sprite-stack.svg#rate-star" alt="rating star">
+                                        <img class="product-card__rate-star" src="images/dist/sprite-stack.svg#rate-star" alt="rating star">
+                                        <img class="product-card__rate-star" src="images/dist/sprite-stack.svg#rate-star" alt="rating star">
+                                        <img class="product-card__rate-star" src="images/dist/sprite-stack.svg#rate-star" alt="rating star">
+                                    </div>
+                                    <span class="product-card__rate-count">125+Review</span>
+                                </div>
+                            </div>
+                            <img class="product-card__img" src="images/dist/sprite-stack.svg#hero-gamepad" alt="Sony Wireless VR Glasses">
+                        </article>
+                    </a>
+                </div>
+            </section>
         </div>
     </main>
 

@@ -3,6 +3,11 @@ body {
     color: $cReg;
     font-size: 18px;
     line-height: 29px;
+    background: #FFE6D7;
+}
+
+.main{
+    position: relative;
 }
 
 .visually-hidden {
@@ -25,6 +30,40 @@ body {
     margin: 0 auto;
 }
 
+.title {
+    @extend %jBold;
+    font-size: 68px;
+    line-height: 75px;
+    color: $cAcc;
+    max-width: 590px;
+    width: 100%;
+    margin-bottom: 25px;
+
+    &--accent {
+        font-size: 58px;
+        color: $cDark;
+
+        &2 {
+            @extend %qBold;
+        }
+    }
+}
+
+.subtitle {
+    display: block;
+    @extend %jMed;
+    font-size: 23px;
+    line-height: 24px;
+    color: $cDark;
+    margin-bottom: 25px;
+}
+
+.text {
+    margin-bottom: 30px;
+    max-width: 518px;
+    width: 100%;
+}
+
 .get-started-btn {
     width: 207px;
     color: #FFF;
@@ -37,5 +76,55 @@ body {
     &--header {
         width: 180px;
         background: linear-gradient(137deg, #4499D9 0%, #7367BE 100%);
+    }
+}
+
+.product-card{
+    padding: 7px 11px 7px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__info{
+        max-width: 102px;
+        font-size: 10px;
+        line-height: 12px;
+        color: $cDark;
+    }
+
+    &__title{
+        margin-bottom: 5px;
+    }
+
+    &__text{
+        @extend %jBold;
+        color: $cAcc;
+        line-height: 10px;
+        margin-bottom: 5px;
+    }
+
+    &__rate{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__rate-stars{
+        display: flex;
+        align-items: center;
+        gap: 4px;
+    }
+
+    &__rate-star{
+        max-width: 7px;
+        width: 100%;
+    }
+
+    &__rate-count{
+        font-size: 8px;
+    }
+
+    &__img{
+        max-width: 80px;
     }
 }

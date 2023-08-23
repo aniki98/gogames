@@ -3,30 +3,174 @@
 @import 'vars';
 @import 'global';
 
+.hero-bg{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-image: url('../images/dist/hero-bg.png');
+}
 
-.header{
+.hero-bg-blot{
+    position: absolute;
+    width: 50vw;
+    height: 50vw;
+    left: -1vw;
+    top: 38vh;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-image: url('../images/dist/hero-bg-blot.png');
+}
+
+.hero-bg-cross1{
+    position: absolute;
+    left: 0;
+    top: 30vh;
+    transform: translateX(-40%);
+    width: 112px;
+    height: 112px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-image: url('../images/dist/sprite-stack.svg#hero-cross-1');
+}
+
+.hero-bg-cross2{
+    position: absolute;
+    left: 30vw;
+    top: 70vh;
+    width: 118px;
+    height: 118px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-image: url('../images/dist/sprite-stack.svg#hero-cross-2');
+}
+
+.hero-bg-dots{
+    position: absolute;
+    right: 2vw;
+    top: 40vh;
+    width: 123px;
+    height: 123px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-image: url('../images/dist/sprite-stack.svg#hero-dots');
+}
+
+.header {
     margin-top: 10px;
     color: $cDark;
     line-height: 24px;
+    position: relative;
 
-    &__inner{
+    &__inner {
         display: flex;
         justify-content: space-between;
         align-items: flex-end;
     }
 
-    &__logo{
+    &__logo {
         max-width: 286px;
         width: 100%;
     }
 
-    &__nav-list{
+    &__nav-list {
         display: flex;
         column-gap: 15px;
         align-items: center;
     }
 
-    &__nav-list-item-link{
+    &__nav-list-item-link {
         padding: 15px;
+    }
+}
+
+.hero {
+    margin-top: 70px;
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
+
+    &__left {
+        width: fit-content;
+    }
+
+    &__subtitle{
+        position: relative;
+
+        &::after{
+            content: '';
+            position: absolute;
+            width: 130px;
+            height: 130px;
+            left: 210px;
+            top: 50%;
+            transform: translateY(-50%);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+            background-image: url('../images/dist/sprite-stack.svg#hero-double-arrow');
+        }
+    }
+
+    &__right {
+        max-width: 568px;
+        max-height: 584px;
+        width: 100%;
+        height: 100vh;
+        position: relative;
+        left: -30px;
+    }
+
+    &__right-img-bg,
+    &__right-img {
+        max-width: 568px;
+        max-height: 584px;
+        width: 100%;
+        height: 100vh;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        position: absolute;
+    }
+
+    &__right-img-bg {
+        max-width: 588px;
+        max-height: 538px;
+        bottom: -30px;
+        right: -20px;
+        background-image: url('../images/dist/sprite-stack.svg#hero-person-bg');
+    }
+
+    &__right-img {
+        bottom: 0;
+        right: 0;
+        background-image: url('../images/dist/sprite-stack.svg#hero-person');
+    }
+
+    &__product-card {
+        background: rgba(255, 255, 255, .4);
+        border-radius: 10px;
+        max-width: 212px;
+        width: 100%;
+        position: absolute;
+        left: -40px;
+        top: -30px;
+        overflow: hidden;
+        filter: drop-shadow(0px 10px 20px rgba(235, 131, 130, 0.40));
+
+        &--right {
+            left: initial;
+            top: initial;
+            right: -120px;
+            bottom: -25px;
+        }
     }
 }
