@@ -273,3 +273,85 @@
         }
     }
 }
+
+.about-consoles{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url('../images/dist/about-consoles-bg.png');
+
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 30px;
+    }
+
+    &__text{
+        position: relative;
+
+        &::before{
+            content: '';
+            position: absolute;
+            width: 33px;
+            height: 33px;
+            bottom: -40px;
+            right: 11%;
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url('../images/dist/sprite-stack.svg#arrow-left');
+        }
+    }
+
+    &__right{
+        position: relative;
+        max-width: 634px;
+        width: 100%;
+    }
+
+    &__right-img-bg{
+        width: 100%;
+        max-height: 566px;
+        height: 100vh;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-image: url('../images/dist/sprite-stack.svg#about-consoles-main-img-bg');
+    }
+
+    &__right-img,
+    &__right-img-screw-small,
+    &__right-img-screw-big{
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    &__right-img{
+        max-width: 510px;
+        max-height: 566px;
+        left: 0;
+        bottom: -11%;
+        background-image: url('../images/dist/sprite-stack.svg#about-consoles-main-img');
+    }
+
+    &__right-img-screw-small{
+        max-width: 83px;
+        max-height: 83px;
+        left: 40%;
+        top: 25%;
+        background-image: url('../images/dist/sprite-stack.svg#about-consoles-main-img-screw-small');
+    }
+
+    &__right-img-screw-big{
+        max-width: 136px;
+        max-height: 136px;
+        right: 30%;
+        top: 10%;
+        background-image: url('../images/dist/sprite-stack.svg#about-consoles-main-img-screw-big');
+    }
+}

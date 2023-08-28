@@ -17,9 +17,18 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     addRelevantPaddingToSectionAboutVR();
 
+    function addRelevantPaddingToSectionAboutConsoles(){
+        const sectionAboutConsoles = document.querySelector('.about-consoles');
+        const sectionAboutConsolesHeight = sectionAboutConsoles.offsetHeight;
+        const sectionAboutConsolesPaddingToAdd = (clientHeight - sectionAboutConsolesHeight) / 2;
+        sectionAboutConsoles.style.padding = `${sectionAboutConsolesPaddingToAdd}px 0`;
+    }
+    addRelevantPaddingToSectionAboutConsoles();
+
     window.addEventListener('resize', () => {
         addRelevantPaddingToSectionHero();
         addRelevantPaddingToSectionAboutVR();
+        addRelevantPaddingToSectionAboutConsoles();
     });
 
 });
