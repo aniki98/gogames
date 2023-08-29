@@ -6,7 +6,7 @@ body {
     background: #FFE6D7;
 }
 
-.main{
+.main {
     position: relative;
 }
 
@@ -79,52 +79,119 @@ body {
     }
 }
 
-.product-card{
+.product-card {
     padding: 7px 11px 7px 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    &__info{
+    &__info {
         max-width: 102px;
         font-size: 10px;
         line-height: 12px;
         color: $cDark;
     }
 
-    &__title{
+    &__title {
         margin-bottom: 5px;
     }
 
-    &__text{
+    &__text {
         @extend %jBold;
         color: $cAcc;
         line-height: 10px;
         margin-bottom: 5px;
     }
 
-    &__rate{
+    &__rate {
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
 
-    &__rate-stars{
+    &__rate-stars {
         display: flex;
         align-items: center;
         gap: 4px;
     }
 
-    &__rate-star{
+    &__rate-star {
         max-width: 7px;
         width: 100%;
     }
 
-    &__rate-count{
+    &__rate-count {
         font-size: 8px;
     }
 
-    &__img{
+    &__img {
         max-width: 80px;
+    }
+}
+
+.pricing-plan {
+    padding: 36px 46px 46px;
+    border-radius: 20px;
+    background: #FBDACF;
+    box-shadow: 0px 20px 50px 0px rgba(132, 148, 205, 0.08);
+    overflow: hidden;
+    flex-basis: 100%;
+
+    &__title{
+        @extend %jBold;
+        color: $cDark;
+        font-size: 32px;
+        line-height: 32px;
+    }
+
+    &__title-price-wrapper{
+        display: block;
+        margin: 30px 0 25px;
+        color: $cAcc;
+    }
+
+    &__title-price{
+        font-size: 50px;
+        line-height: 50px;
+    }
+
+    &__title-price-currency{
+        font-size: 27px;
+        line-height: 27px;
+    }
+
+    &__title-price-small{
+        font-size: 18px;
+        line-height: 18px;
+    }
+
+    &__list{
+        margin-bottom: 45px;
+    }
+
+    &__list-item{
+        padding-left: 27px;
+        position: relative;
+
+        &::before{
+            content: '';
+            position: absolute;
+            width: 13px;
+            height: 13px;
+            left: 0;
+            top: 5px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            background-image: url('../images/dist/sprite-stack.svg#checkmark');
+        }
+    }
+
+    &__list-item+.pricing-plan__list-item{
+        margin-top: 15px;
+    }
+
+    &__link{
+        width: 100%;
     }
 }
