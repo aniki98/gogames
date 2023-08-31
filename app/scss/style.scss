@@ -256,10 +256,10 @@
         }
     }
 
-    &__text{
+    &__text {
         position: relative;
 
-        &::before{
+        &::before {
             content: '';
             position: absolute;
             width: 33px;
@@ -274,23 +274,23 @@
     }
 }
 
-.about-consoles{
+.about-consoles {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     background-image: url('../images/dist/about-consoles-bg.png');
 
-    &__inner{
+    &__inner {
         display: flex;
         justify-content: space-between;
         align-items: center;
         gap: 30px;
     }
 
-    &__text{
+    &__text {
         position: relative;
 
-        &::before{
+        &::before {
             content: '';
             position: absolute;
             width: 33px;
@@ -304,13 +304,13 @@
         }
     }
 
-    &__right{
+    &__right {
         position: relative;
         max-width: 634px;
         width: 100%;
     }
 
-    &__right-img-bg{
+    &__right-img-bg {
         width: 100%;
         max-height: 566px;
         height: 100vh;
@@ -322,7 +322,7 @@
 
     &__right-img,
     &__right-img-screw-small,
-    &__right-img-screw-big{
+    &__right-img-screw-big {
         position: absolute;
         width: 100%;
         height: 100vh;
@@ -331,7 +331,7 @@
         background-size: contain;
     }
 
-    &__right-img{
+    &__right-img {
         max-width: 510px;
         max-height: 566px;
         left: 0;
@@ -339,7 +339,7 @@
         background-image: url('../images/dist/sprite-stack.svg#about-consoles-main-img');
     }
 
-    &__right-img-screw-small{
+    &__right-img-screw-small {
         max-width: 83px;
         max-height: 83px;
         left: 40%;
@@ -347,7 +347,7 @@
         background-image: url('../images/dist/sprite-stack.svg#about-consoles-main-img-screw-small');
     }
 
-    &__right-img-screw-big{
+    &__right-img-screw-big {
         max-width: 136px;
         max-height: 136px;
         right: 30%;
@@ -356,15 +356,15 @@
     }
 }
 
-.pricing{
+.pricing {
     padding: 50px 0 90px;
 
-    &__title{
+    &__title {
         max-width: 100%;
         text-align: center;
     }
 
-    &__list{
+    &__list {
         padding-top: 25px;
         display: flex;
         gap: 10px;
@@ -372,8 +372,76 @@
         align-items: center;
     }
 
-    &__list-item{
+    &__list-item {
         max-width: 360px;
         width: 100%;
+    }
+}
+
+.footer {
+    padding: 25px 0;
+    border-top: 1.5px solid rgba(129, 111, 140, .5);
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__logo {
+        color: transparent;
+        overflow: hidden;
+        max-width: 240px;
+        width: 100%;
+        max-height: 65px;
+        height: 100vh;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        background-image: url('../images/dist/footer-logo.png');
+    }
+
+    &__copy {
+        font-size: 16px;
+    }
+
+    &__socials-list {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    &__socials-list-item-link {
+        position: relative;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        color: transparent;
+        overflow: hidden;
+        background: #FCD8CB;
+        box-shadow: -1px -1px 8px 0px rgba(255, 255, 255, 0.08);
+    }
+
+    &__socials-list-item-link-svg{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        fill: $cDark;
+    }
+
+    &__socials-list-item-link-facebook{
+        max-width: 11px;
+        max-height: 20px;
+    }
+
+    &__socials-list-item-link-twitter{
+        max-width: 20px;
+        max-height: 17px;
+    }
+
+    &__socials-list-item-link-instagram{
+        max-width: 20px;
+        max-width: 20px;
     }
 }

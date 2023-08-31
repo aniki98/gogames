@@ -25,10 +25,24 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     addRelevantPaddingToSectionAboutConsoles();
 
+    function addRelevantPaddingToSectionPricing(){
+        const sectionPricing = document.querySelector('.pricing');
+        const footer = document.querySelector('.footer');
+        const sectionPricingHeight = sectionPricing.offsetHeight;
+        const footerHeight = footer.offsetHeight;
+        const footerAndPricingHeight = sectionPricingHeight + footerHeight;
+        if (clientHeight > footerAndPricingHeight){
+            const difference = clientHeight - footerAndPricingHeight;
+            sectionPricing.style.padding = `${50 + difference}px 0 90px`;
+        }
+    }
+    addRelevantPaddingToSectionPricing();
+
     window.addEventListener('resize', () => {
         addRelevantPaddingToSectionHero();
         addRelevantPaddingToSectionAboutVR();
         addRelevantPaddingToSectionAboutConsoles();
+        addRelevantPaddingToSectionPricing()
     });
 
 });
