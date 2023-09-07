@@ -71,6 +71,7 @@
     position: relative;
 
     &__inner {
+        position: relative;
         display: flex;
         justify-content: space-between;
         align-items: flex-end;
@@ -207,6 +208,7 @@
 
     &__left {
         position: relative;
+        z-index: 10;
     }
 
     &__left-img-bg {
@@ -238,6 +240,7 @@
     &__right {
         width: fit-content;
         position: relative;
+        z-index: 10;
 
         &::before {
             content: '';
@@ -253,6 +256,7 @@
             background-position: center;
             background-size: contain;
             background-image: url('../images/dist/about-vr-bg-vr.png');
+            z-index: -1;
         }
     }
 
@@ -445,3 +449,5 @@
         max-width: 20px;
     }
 }
+
+@import 'media';
