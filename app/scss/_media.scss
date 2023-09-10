@@ -13,6 +13,35 @@
     }
 }
 
+@media(max-width: 1200px){
+    .about-consoles{
+        &__right{
+            flex-shrink: 2;
+        }
+
+        &__right-img{
+            max-width: 80%;
+        }
+
+        &__right-img-screw{
+            max-width: 130px;
+            max-height: 140px;
+            top: 15%;
+            left: 40%;
+        }
+
+        &__right-img-screw-small{
+            max-width: 50px;
+            max-height: 50px;
+        }
+
+        &__right-img-screw-big{
+            max-width: 95px;
+            max-height: 95px;
+        }
+    }
+}
+
 @media(max-width: 1100px){
     .hero{
         &__right{
@@ -95,6 +124,25 @@
             }
         }
     }
+
+    .about-consoles{
+        &__right-img-screw{
+            max-width: 95px;
+            max-height: 95px;
+            top: 25%;
+            left: 35%;
+        }
+
+        &__right-img-screw-small{
+            max-width: 30px;
+            max-height: 30px;
+        }
+
+        &__right-img-screw-big{
+            max-width: 60px;
+            max-height: 60px;
+        }
+    }
 }
 
 @media(max-width: 700px){
@@ -135,6 +183,23 @@
 
         &__right{
             order: -1;
+        }
+    }
+
+    .about-consoles{
+        &__inner{
+            flex-direction: column;
+            justify-content: flex-start;
+            gap: 5px;
+        }
+
+        &__right-img-bg{
+            max-height: 50vh;
+        }
+
+        &__right-img{
+            max-height: 80%;
+            bottom: 0;
         }
     }
 }
@@ -259,6 +324,12 @@
             &::before{
                 display: none;
             }
+        }
+    }
+
+    .about-consoles{
+        &__text::before{
+            display: none;
         }
     }
 }

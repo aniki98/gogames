@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const sectionHero = document.querySelector('.hero');
     const sectionHeroBg = document.querySelector('.hero-bg');
     const sectionAboutVR = document.querySelector('.about-vr');
+    const sectionAboutConsoles = document.querySelector('.about-consoles');
 
     if (header && sectionHero) {
         function addRelevantPaddingToSectionHero() {
@@ -14,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (sectionHeroHeightIncludingMarginTop + headerHeightIncludingMarinTop < changingClientHeight) {
                 const sectionHeroPaddingToAdd = changingClientHeight - (sectionHeroHeightIncludingMarginTop + headerHeightIncludingMarinTop);
                 sectionHero.style.paddingBottom = `${sectionHeroPaddingToAdd}px`;
-            } else{
+            } else {
                 sectionHero.style.paddingBottom = '30px';
             }
         }
@@ -39,6 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
         function addRelevantPaddingToSectionAboutVR() {
             const sectionAboutVRWrapper = sectionAboutVR.querySelector('.about-vr__wrapper');
             const changingClientHeight = document.documentElement.clientHeight;
+
             if (sectionAboutVRWrapper.offsetHeight < changingClientHeight) {
                 const sectionAboutVRWrapper = sectionAboutVR.querySelector('.about-vr__wrapper');
                 const sectionAboutVRWrapperHeight = sectionAboutVRWrapper.offsetHeight;
@@ -51,6 +53,21 @@ document.addEventListener('DOMContentLoaded', () => {
         addRelevantPaddingToSectionAboutVR();
     }
 
+    if (sectionAboutConsoles) {
+        function addRelevantPaddingToSectionAboutConsoles() {
+            const sectionAboutConsolesHeight = sectionAboutConsoles.offsetHeight;
+            const changingClientHeight = document.documentElement.clientHeight;
+
+            if (sectionAboutConsolesHeight < changingClientHeight) {
+                const sectionAboutConsolesPaddingToAdd = Math.round((changingClientHeight - sectionAboutConsolesHeight) / 2);
+                sectionAboutConsoles.style.padding = `${sectionAboutConsolesPaddingToAdd}px 0`;
+            } else {
+                sectionAboutConsoles.style.padding = '30px 0';
+            }
+        }
+        addRelevantPaddingToSectionAboutConsoles();
+    }
+
     window.addEventListener('resize', () => {
         if (header && sectionHero) {
             addRelevantPaddingToSectionHero();
@@ -61,17 +78,11 @@ document.addEventListener('DOMContentLoaded', () => {
         if (sectionAboutVR) {
             addRelevantPaddingToSectionAboutVR();
         }
-        // addRelevantPaddingToSectionAboutConsoles();
+        if (sectionAboutConsoles) {
+            addRelevantPaddingToSectionAboutConsoles();
+        }
         // addRelevantPaddingToSectionPricing();
     });
-
-    // function addRelevantPaddingToSectionAboutConsoles() {
-    //     const sectionAboutConsoles = document.querySelector('.about-consoles');
-    //     const sectionAboutConsolesHeight = sectionAboutConsoles.offsetHeight;
-    //     const sectionAboutConsolesPaddingToAdd = (clientHeight - sectionAboutConsolesHeight) / 2;
-    //     sectionAboutConsoles.style.padding = `${sectionAboutConsolesPaddingToAdd}px 0`;
-    // }
-    // addRelevantPaddingToSectionAboutConsoles();
 
     // function addRelevantPaddingToSectionPricing() {
     //     const sectionPricing = document.querySelector('.pricing');
