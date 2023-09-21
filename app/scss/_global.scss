@@ -139,7 +139,10 @@ body {
     background: #FBDACF;
     box-shadow: 0px 20px 50px 0px rgba(132, 148, 205, 0.08);
     overflow: hidden;
-    flex-basis: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
 
     &__title{
         @extend %jBold;
@@ -197,5 +200,6 @@ body {
 
     &__link{
         width: 100%;
+        margin-top: auto;
     }
 }

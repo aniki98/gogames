@@ -1,17 +1,19 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    const clientHeight = document.documentElement.clientHeight;
     const header = document.querySelector('.header');
     const sectionHero = document.querySelector('.hero');
     const sectionHeroBg = document.querySelector('.hero-bg');
     const sectionAboutVR = document.querySelector('.about-vr');
     const sectionAboutConsoles = document.querySelector('.about-consoles');
+    const sectionPricing = document.querySelector('.pricing');
+    const footer = document.querySelector('.footer');
 
     if (header && sectionHero) {
         function addRelevantPaddingToSectionHero() {
             const headerHeightIncludingMarinTop = (header.offsetHeight) + 10;
             const sectionHeroHeightIncludingMarginTop = (sectionHero.offsetHeight) + 50;
             const changingClientHeight = document.documentElement.clientHeight;
+
             if (sectionHeroHeightIncludingMarginTop + headerHeightIncludingMarinTop < changingClientHeight) {
                 const sectionHeroPaddingToAdd = changingClientHeight - (sectionHeroHeightIncludingMarginTop + headerHeightIncludingMarinTop);
                 sectionHero.style.paddingBottom = `${sectionHeroPaddingToAdd}px`;
@@ -27,6 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const headerHeightIncludingMarinTop = (header.offsetHeight) + 10;
             const sectionHeroHeightIncludingMarginTop = (sectionHero.offsetHeight) + 50;
             const changingClientHeight = document.documentElement.clientHeight;
+
             if ((headerHeightIncludingMarinTop + sectionHeroHeightIncludingMarginTop) > changingClientHeight) {
                 const headerHeightIncludingMarinTop = (header.offsetHeight) + 10;
                 const sectionHeroHeightIncludingMarginTop = (sectionHero.offsetHeight) + 50;
@@ -68,35 +71,46 @@ document.addEventListener('DOMContentLoaded', () => {
         addRelevantPaddingToSectionAboutConsoles();
     }
 
+    if (sectionPricing && footer) {
+        function addRelevantPaddingToSectionPricing() {
+            const changingClientHeight = document.documentElement.clientHeight;
+            const changingWindowWidth = window.innerWidth;
+            const sectionPricingHeight = sectionPricing.offsetHeight;
+            const footerHeight = footer.offsetHeight;
+            const footerAndPricingHeight = sectionPricingHeight + footerHeight;
+            
+            if (changingClientHeight > footerAndPricingHeight) {
+                const difference = changingClientHeight - footerAndPricingHeight;
+                sectionPricing.style.padding = `${50 + difference}px 0 90px`;
+            } else if (changingWindowWidth <= 700) {
+                sectionPricing.style.padding = '50px 0';
+            } else {
+                sectionPricing.style.padding = '50px 0 90px';
+            }
+        }
+        addRelevantPaddingToSectionPricing();
+    }
+
     window.addEventListener('resize', () => {
         if (header && sectionHero) {
             addRelevantPaddingToSectionHero();
         }
+
         if (header && sectionHero && sectionHeroBg) {
             changeSectionHeroBgHeight();
         }
+
         if (sectionAboutVR) {
             addRelevantPaddingToSectionAboutVR();
         }
+
         if (sectionAboutConsoles) {
             addRelevantPaddingToSectionAboutConsoles();
         }
-        // addRelevantPaddingToSectionPricing();
+
+        if (sectionPricing && footer) {
+            addRelevantPaddingToSectionPricing();
+        }
     });
-
-    // function addRelevantPaddingToSectionPricing() {
-    //     const sectionPricing = document.querySelector('.pricing');
-    //     const footer = document.querySelector('.footer');
-    //     const sectionPricingHeight = sectionPricing.offsetHeight;
-    //     const footerHeight = footer.offsetHeight;
-    //     const footerAndPricingHeight = sectionPricingHeight + footerHeight;
-    //     if (clientHeight > footerAndPricingHeight) {
-    //         const difference = clientHeight - footerAndPricingHeight;
-    //         sectionPricing.style.padding = `${50 + difference}px 0 90px`;
-    //     }
-    // }
-    // addRelevantPaddingToSectionPricing();
-
-
 
 });
